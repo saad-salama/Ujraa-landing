@@ -7,29 +7,38 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             text-align: center;
         }
         .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 3rem;
             max-width: 500px;
-            padding: 2rem;
+            width: 90%;
+            margin: 2rem;
         }
         .logo {
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 1.5rem;
-            color: #3b82f6;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
         h1 {
             font-size: 1.8rem;
             margin-bottom: 2rem;
             font-weight: 400;
+            line-height: 1.4;
         }
         .email-form {
             display: flex;
@@ -37,23 +46,32 @@
         }
         input[type="email"] {
             padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 4px 0 0 4px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px 0 0 8px;
             flex-grow: 1;
             font-size: 1rem;
+            outline: none;
+            transition: border 0.3s;
+        }
+        input[type="email"]:focus {
+            border-color: #3b82f6;
         }
         button {
-            background-color: #3b82f6;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
             color: white;
             border: none;
-            padding: 0 1.5rem;
-            border-radius: 0 4px 4px 0;
+            padding: 0 1.8rem;
+            border-radius: 0 8px 8px 0;
             cursor: pointer;
             font-size: 1rem;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
         }
         .disclaimer {
             font-size: 0.8rem;
-            color: #777;
+            color: #64748b;
         }
     </style>
 </head>
