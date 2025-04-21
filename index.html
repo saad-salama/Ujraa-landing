@@ -4,48 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ujraa - Coming Soon</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Animate on scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            padding: 2rem;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #3b82f6;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        .email-form {
+            display: flex;
+            margin: 2rem 0;
+        }
+        input[type="email"] {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            flex-grow: 1;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #777;
         }
     </style>
 </head>
-<body class="min-h-screen gradient-bg text-white">
-    <div class="container mx-auto px-6 py-20 text-center" data-aos="fade-up">
-        <h1 class="text-5xl font-bold mb-6">Ujraa</h1>
-        <p class="text-xl mb-8 opacity-90">The future of freelancing in Egypt is coming soon!</p>
+<body>
+    <div class="container">
+        <div class="logo">Ujraa</div>
+        <h1>Stay tuned<br>we're launching soon.</h1>
         
-        <!-- Countdown -->
-        <div class="flex justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="200">
-            <div class="bg-white/10 backdrop-blur p-4 rounded-lg">
-                <div class="text-3xl font-mono" id="days">00</div>
-                <div class="text-sm">Days</div>
-            </div>
-            <!-- Repeat for hours/minutes/seconds -->
+        <div class="email-form">
+            <input type="email" placeholder="Enter your email address">
+            <button>Notify Me</button>
         </div>
-
-        <!-- Email signup -->
-        <div class="max-w-md mx-auto" data-aos="fade-up" data-aos-delay="400">
-            <input type="email" placeholder="Your email" class="px-4 py-3 w-full rounded-l-lg text-black">
-            <button class="bg-white text-blue-600 px-6 py-3 rounded-r-lg font-bold">Notify Me</button>
-        </div>
+        
+        <p class="disclaimer">Don't worry, we don't spam.</p>
     </div>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-        // Simple countdown (replace with your launch date)
-        function updateCountdown() {
-            const launchDate = new Date("2024-12-01").getTime();
-            const now = new Date().getTime();
-            const diff = launchDate - now;
-            document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-        }
-        setInterval(updateCountdown, 1000);
-    </script>
 </body>
 </html>
